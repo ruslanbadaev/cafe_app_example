@@ -1,8 +1,9 @@
-import 'package:artistover/app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
+import 'app.dart';
 import 'controller.dart';
 import 'utils/constants/colors.dart';
 
@@ -20,11 +21,14 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: () => GetMaterialApp(
-        title: 'Example Caffe',
-        showSemanticsDebugger: false,
+        debugShowCheckedModeBanner: false,
+        title: 'Example Cafe',
         theme: ThemeData(
           primarySwatch: AppColors.WHITE,
           visualDensity: VisualDensity.adaptivePlatformDensity,
+          textTheme: GoogleFonts.comfortaaTextTheme(
+            Theme.of(context).textTheme,
+          ),
         ),
         home: App(),
       ),

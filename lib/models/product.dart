@@ -1,5 +1,3 @@
-import 'package:artistover/models/item.dart';
-
 class ProductModel {
   final int id;
   final String title;

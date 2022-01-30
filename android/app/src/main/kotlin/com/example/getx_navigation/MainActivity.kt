@@ -1,4 +1,4 @@
-package com.ruslanbadaev.artistover
+package com.ruslanbadaev.cafe_app_example
 
 import io.flutter.embedding.android.FlutterActivity
 

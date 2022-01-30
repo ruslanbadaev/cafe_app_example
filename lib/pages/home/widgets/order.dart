@@ -1,4 +1,4 @@
-import 'package:artistover/utils/constants/colors.dart';
+import 'package:cafe_app_example/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../models/item.dart';

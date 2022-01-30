@@ -1,4 +1,4 @@
-import 'package:artistover/utils/constants/colors.dart';
+import 'package:cafe_app_example/utils/constants/colors.dart';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,7 +37,7 @@ class _AppState extends State<App> with TickerProviderStateMixin {
                   color: AppColors.PRIMARY,
                 ),
                 Text(
-                  'Eco Caffe',
+                  'Example Cafe',
                   style: TextStyle(color: AppColors.PRIMARY),
                 ),
               ],

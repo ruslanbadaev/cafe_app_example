@@ -1,4 +1,4 @@
-name: artistover
+name: cafe_app_example
 description: A new Flutter project.
 
 publish_to: "none"
@@ -24,6 +24,7 @@ dependencies:
   # bottom_sheet_bar: 2.1.1
   flutter_screenutil: 5.1.1
   bubble_bottom_bar: 2.0.0
+  google_fonts: 2.2.0
 
 dev_dependencies:
   flutter_test:

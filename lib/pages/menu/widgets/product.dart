@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
 
-class MenuWidget extends StatefulWidget {
+class ProductWidget extends StatefulWidget {
   int id;
   String title;
   String description;
@@ -15,7 +15,7 @@ class MenuWidget extends StatefulWidget {
   Function onPressed;
   double descriptionWidth;
 
-  MenuWidget({
+  ProductWidget({
     Key? key,
     required this.id,
     required this.title,
@@ -30,10 +30,10 @@ class MenuWidget extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<MenuWidget> createState() => _MenuWidgetState();
+  State<ProductWidget> createState() => _ProductWidgetState();
 }
 
-class _MenuWidgetState extends State<MenuWidget> {
+class _ProductWidgetState extends State<ProductWidget> {
   @override
   void initState() {
     super.initState();
@@ -42,12 +42,10 @@ class _MenuWidgetState extends State<MenuWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: Container(
-          // height: 96,
-          // margin: EdgeInsets.all(12),
           decoration: BoxDecoration(
             color: AppColors.WHITE,
           ),
@@ -67,7 +65,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                   },
                   blendMode: BlendMode.dstIn,
                   child: Image.network(
-                    'https://d2j6dbq0eux0bg.cloudfront.net/images/65414046/2667249809.jpg',
+                    widget.imageUrl,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -81,14 +79,14 @@ class _MenuWidgetState extends State<MenuWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Produc Name',
+                      widget.title,
                       style: TextStyle(
                         color: AppColors.PRIMARY,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text(
-                      'Produc description Produc description Produc description Produc description Produc description Produc description ',
+                      widget.description,
                       style: TextStyle(
                         color: AppColors.BLACK,
                         fontWeight: FontWeight.w400,
@@ -96,7 +94,6 @@ class _MenuWidgetState extends State<MenuWidget> {
                       ),
                       maxLines: 3,
                     ),
-                    // Expanded(child: Text('Text', overflow: TextOverflow.ellipsis, maxLines: 1)),
                   ],
                 ),
               ),
@@ -107,14 +104,14 @@ class _MenuWidgetState extends State<MenuWidget> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      '6\$',
+                      '${widget.price}${widget.currency}',
                       style: TextStyle(
                         color: AppColors.PRIMARY,
                         fontWeight: FontWeight.w700,
                       ),
                     ),
                     Text(
-                      '400г',
+                      widget.weight,
                       style: TextStyle(
                         color: AppColors.BLACK,
                         fontWeight: FontWeight.w400,

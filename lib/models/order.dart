@@ -1,4 +1,4 @@
-import 'package:artistover/models/item.dart';
+import 'package:cafe_app_example/models/item.dart';
 
 class OrderModel {
   final int id;
